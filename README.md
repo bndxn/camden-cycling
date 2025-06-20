@@ -6,13 +6,16 @@ Training is done using AWS DeepAR, following their [guides](https://docs.aws.ama
 
 The model takes the previous 72 hours and predicts the next 24. 
 
-![Cyclists through Ktown](count_i.png)
+![Cyclists through Ktown](images/count_i.png)
+
 
 ## Prediction
 
-I deployed the `Estimator` to an async serverless endpoint. It was trained on one month of data from May 2025, and here I test a prediction on the most recent data June 2025. I'm testing it on a Friday and it does predict less usage tomorrow (Saturday) which does seem correct. Perhaps it has picked this up from seeing a midweek spike over the past 72 hours, and anticipates a quieter weekend, which seems correct to me!
+I deployed the `Estimator` to an async serverless endpoint. It was trained on one month of data from May 2025, and here I test a prediction on the most recent data June 2025. I'm testing it on a Friday and it does predict less usage tomorrow (Saturday). Perhaps it has picked this up from seeing a midweek spike over the past 72 hours, and anticipates a quieter weekend, which seems correct to me! 
 
-![Recent and predicted](recent_and_forecast.png)
+![Recent and predicted](images/recent_and_forecast.png)
+
+ 
 
 ## Project structure
 ```
