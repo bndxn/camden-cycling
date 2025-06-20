@@ -13,6 +13,22 @@ The model takes the previous 72 hours and predicts the next 24.
 
 I deployed the `Estimator` to an async serverless endpoint. It was trained on one month of data from May 2025, and here I test a prediction on the most recent data June 2025. I'm testing it on a Friday and it does predict less usage tomorrow (Saturday). Perhaps it has picked this up from seeing a midweek spike over the past 72 hours, and anticipates a quieter weekend, which seems correct to me! 
 
+I sent a request to the async endpoint using this: 
+
+```
+    predictor = Predictor(
+        endpoint_name="ben-innovation-deepar-forecast",  
+        sagemaker_session=sagemaker.Session()
+    )
+
+    response = predictor.predict(
+        json.dumps(payload),
+        initial_args={"ContentType": "application/json"}
+    )
+```
+
+Both the recent observations and the predictions from the Sagemaker endpoint for the next 24 hours are plotted together on the chart below.
+
 ![Recent and predicted](images/recent_and_forecast.png)
 
  
