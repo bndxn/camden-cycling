@@ -1,0 +1,22 @@
+[project]
+name = "camden-cycling"
+version = "0.1.0"
+description = "A quickstart cycling predictor."
+authors = [
+    {name = "Ben Dixon",email = "ben.dixon@bbc.co.uk"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<4"
+dependencies = [
+    "pandas (>=2.3.0,<3.0.0)",
+    "sodapy (>=2.2.0,<3.0.0)",
+    "matplotlib (>=3.10.3,<4.0.0)",
+    "sagemaker (>=2.247.0,<3.0.0)",
+    "boto3 (>=1.38.40,<2.0.0)",
+    "python-dotenv (>=1.1.0,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
