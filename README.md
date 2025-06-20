@@ -15,10 +15,13 @@ I deployed the `Estimator` to an async serverless endpoint. It was trained on on
 ![Recent and predicted](recent_and_forecast.png)
 
 ## Project structure
-- `create_estimator.py` — fetches data, converts to DeepAR format, and uses a DeepAR container to train the model
-- `deploy_endpoint.py` — deploys serverless inference endpoint
-- `invoke_endpoint.py` — sends requests to endpoint and plots predictions
-- `helpers.py` — utilities for data transformation and S3 uploads
+```
+src/
+├── create_estimator.py     # Fetches data, converts to DeepAR format, and uses a DeepAR container to train the model
+├── deploy_endpoint.py      # Deploys serverless inference endpoint
+├── invoke_endpoint.py      # Sends requests to endpoint and plots predictions
+└── helpers.py              # Utilities for data transformation and S3 uploads
+```
 
 ## Environment set up
 
